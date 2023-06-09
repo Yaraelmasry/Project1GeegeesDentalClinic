@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Geegees Dental Clinic</title>
+</head>
+<!--Navbar-->
+<body style="background-color: #eceaea;">
+  <nav class="navbar navbar-expand-md navbar-light"  style="background-color: rgb(126, 2, 2);">
+    <div class="container-fluid">
+      <a href="#Services" class = "navbar-brand">
+          <img src="./Pictures/gee.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <span class ="fw-bold text-white">
+          Geegees Dental Clinic
+      </span>
+      </a>
+      <button class="navbar-toggler"type="button" data-bs-toggle="collapse"
+      data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Navbar Links-->
+    <div class="collapse navbar-collapse justify-content-end allign-center"
+    id = "main-nav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link fw-bold" aria-current="page" style="color:white;" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold"style="color:white;" href="services.html">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" style="color:white; "href="dentists.html">Our Dentists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" style="color:white;" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item d-md-none">
+        <a class="nav-link " style="color:white; text-decoration: underline;" href="book.html">Book Now</a>
+      </li>
+      <li class="nav-item ms-2 d-none d-md-inline">
+        <a class="btn fw-bolder" style="color: rgb(126, 2, 2); background-color: white;"  href="book.html">Book Now</a>
+      </li>
+    </ul>
+    </div>
+    </div>
+  </nav>
+  <div class = "container">
+      <div class="text-center p-4 display-6" style="color: rgb(100, 2, 2);"><h3>Booking Confirmation </h3></div>
+      
+    <p class = "fs-3 text-center" style="color: rgb(60, 2, 2);">Thank you! Your booking at Geegees Dental Clinic has been confirmed!
+        <br>You will recieve an email shortly!
+        
+         
+         <div class="text-center p-4 display-6" style="color: rgb(100, 2, 2);"><h3>Booking Confirmation Number:#6666 </h3></div>
+        </div>
+</div>
+
+<div class="container text-center">
+
+    <a class ="btn btn" style="color: white;background-color: rgb(126, 2, 2);" id = "download">Download Your Confirmation</a>
+</div>
+
+<p></p>
+<p class="text-center fs-5" style="color: rgb(60, 2, 2);">
+    Redirecting to home page in <span id = "timer"></span> seconds...
+
+</p>
+<div class="container text-center">
+
+    <a class ="btn btn" style="color: white; background-color: rgb(126, 2, 2);" href = "index.html">Go to Home Page</a>
+</div>
+
+<script>
+
+    let x = Math.floor((Math.random()*1000000) + 10000);
+    document.getElementById("confirmationnumber").innerHTML = x;
+</script>
+
+
+<script>
+
+    document.getElementById("download").addEventListener("click", () => 
+    
+    {
+
+        window.print();
+    }
+    
+    );
+</script>
+
+<script>
+
+    var count = 20;
+    function countdown(){
+
+        document.getElementById("timer").innerHTML = count;
+        count = count - 1;
+
+        if (count < 0){
+
+            window.location.href = "index.html";
+        }
+    }
+
+    setInterval(countdown, 1000);
+
+</script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
